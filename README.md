@@ -142,7 +142,7 @@ The API can be tested using Postman or DBeaver (for DB inspection).
 
 Backend is deployed on:
 
-...
+https://virtual-front-desk-backend-2bff.onrender.com
 
 ## Notes
 
