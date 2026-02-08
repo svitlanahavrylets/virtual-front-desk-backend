@@ -1,20 +1,8 @@
 import { Router } from "express";
-import { Task } from "../models/Task";
-import { Option } from "../models/Option";
+import { getTasks } from "../controllers/taskController";
 
 const router = Router();
 
-router.get("/", async (_, res) => {
-  const tasks = await Task.findAll({
-    include: [
-      {
-        model: Option,
-        attributes: ["id", "text"],
-      },
-    ],
-  });
-
-  res.json(tasks);
-});
+router.get("/", getTasks);
 
 export default router;

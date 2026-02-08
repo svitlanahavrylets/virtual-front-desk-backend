@@ -1,9 +1,9 @@
 import app from "./app";
 import sessionRoutes from "./routes/sessionRoutes";
 import taskRoutes from "./routes/taskRoutes";
+import answerRoutes from "./routes/answerRoutes";
 import { dbInit, initModels, setupAssociations } from "./models";
 import { seedTasks } from "./seed/seedTasks";
-import answerRoutes from "./routes/answerRoutes";
 
 const PORT = process.env.PORT || 3000;
 
