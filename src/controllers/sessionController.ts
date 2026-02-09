@@ -4,9 +4,11 @@ import { Session } from "../models/Session";
 
 export const createSession = async (_req: Request, res: Response) => {
   try {
-    console.log("Creating session...");
+    console.log("➡️ createSession called");
 
     const token = uuidv4();
+
+    console.log("Generated token:", token);
 
     const session = await Session.create({ token });
 

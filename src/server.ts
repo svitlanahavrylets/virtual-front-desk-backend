@@ -11,6 +11,10 @@ app.use("/sessions", sessionRoutes);
 app.use("/tasks", taskRoutes);
 app.use("/answers", answerRoutes);
 
+app.get("/health", (_req, res) => {
+  res.json({ ok: true });
+});
+
 (async () => {
   try {
     await dbInit();
