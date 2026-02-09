@@ -8,7 +8,7 @@ This project implements a simple worksheet system with session-based answers.
 - Node.js
 - Express
 - TypeScript
-- MySQL
+- PostgreSQL
 - Sequelize (latest)
 - dotenv
 
@@ -18,7 +18,7 @@ This project implements a simple worksheet system with session-based answers.
 - Worksheet tasks with options
 - Answer submission with session validation
 - Proper HTTP status codes and edge case handling
-- MySQL database with models, associations, and seeds
+- Database models, associations, and seed data
 
 ## Environment Variables
 
@@ -30,11 +30,7 @@ cp .env.example .env
 
 ## Database Setup
 
-1. Create MySQL database manually:
-
-```sql
-CREATE DATABASE your_database_name;
-```
+1. Create PostgreSQL database manually on Render or use an existing one.
 
 2. Install dependencies:
 
@@ -142,7 +138,7 @@ The API can be tested using Postman or DBeaver (for DB inspection).
 
 Backend is deployed on:
 
-https://virtual-front-desk-backend-2bff.onrender.com
+https://virtual-front-desk-backend-production.up.railway.app/
 
 ## Notes
 
