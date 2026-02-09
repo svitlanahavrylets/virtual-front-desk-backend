@@ -1,19 +1,33 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../config/database";
+import { Answer } from "./Answer";
 
-export const Session = sequelize.define("Session", {
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
+export class Session extends Model {
+  declare id: number;
+  declare token: string;
+  declare startedAt: Date;
+  answers?: Answer[];
+}
+
+Session.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
+    token: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    startedAt: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+    },
   },
-  token: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
+  {
+    sequelize,
+    tableName: "sessions",
+    timestamps: true,
   },
-  startedAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-  },
-});
+);

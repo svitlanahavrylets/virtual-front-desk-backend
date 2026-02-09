@@ -5,7 +5,7 @@ import answerRoutes from "./routes/answerRoutes";
 import { dbInit, initModels, setupAssociations } from "./models";
 import { seedTasks } from "./seed/seedTasks";
 
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 3000;
 
 app.use("/sessions", sessionRoutes);
 app.use("/tasks", taskRoutes);

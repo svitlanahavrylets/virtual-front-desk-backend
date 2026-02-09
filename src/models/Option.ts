@@ -12,7 +12,7 @@ export class Option extends Model {
 Option.init(
   {
     id: {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
@@ -25,7 +25,7 @@ Option.init(
       allowNull: false,
     },
     taskId: {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },

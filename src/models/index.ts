@@ -16,7 +16,7 @@ export const initModels = async () => {
 };
 
 export const setupAssociations = () => {
-  Task.hasMany(Option, { foreignKey: "taskId" });
+  Task.hasMany(Option, { as: "options", foreignKey: "taskId" });
   Option.belongsTo(Task, { foreignKey: "taskId" });
 
   Session.hasMany(Answer, { foreignKey: "sessionId" });

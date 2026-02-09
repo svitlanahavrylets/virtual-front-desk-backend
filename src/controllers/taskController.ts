@@ -8,7 +8,8 @@ export const getTasks = async (_req: Request, res: Response) => {
       include: [
         {
           model: Option,
-          attributes: ["id", "text"],
+          attributes: ["id", "text", "isCorrect"],
+          as: "options",
         },
       ],
     });
