@@ -11,10 +11,6 @@ app.use("/sessions", sessionRoutes);
 app.use("/tasks", taskRoutes);
 app.use("/answers", answerRoutes);
 
-app.get("/health", (_req, res) => {
-  res.json({ ok: true });
-});
-
 (async () => {
   try {
     await dbInit();
@@ -22,7 +18,7 @@ app.get("/health", (_req, res) => {
     await initModels();
     await seedTasks();
 
-    app.listen(PORT, "0.0.0.0", () => {
+    app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
   } catch (error) {
