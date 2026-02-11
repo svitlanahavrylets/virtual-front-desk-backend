@@ -18,7 +18,7 @@ app.use("/answers", answerRoutes);
     await initModels();
     await seedTasks();
 
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`Server running on port ${PORT}`);
     });
   } catch (error) {
