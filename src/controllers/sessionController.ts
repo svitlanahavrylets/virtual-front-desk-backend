@@ -5,11 +5,9 @@ import { Session } from "../models/Session";
 export const createSession = async (_req: Request, res: Response) => {
   try {
     const token = uuidv4();
-
     const session = await Session.create({ token });
-
     res.status(201).json({
-      sessionToken: session.getDataValue("token"),
+      token: session.getDataValue("token"),
     });
   } catch (error) {
     console.error("Create session error:", error);
