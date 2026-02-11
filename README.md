@@ -138,7 +138,7 @@ The API can be tested using Postman or DBeaver (for DB inspection).
 
 Backend is deployed on:
 
-https://virtual-front-desk-backend-production.up.railway.app/
+https://virtual-front-desk-backend-0z60.onrender.com
 
 ## Notes
 
